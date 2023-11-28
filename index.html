@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Survey Gain</title>
+  <style>
+
+    
+    body {
+      color: #58a6ff; /* Setează culoarea textului la alb */
+      text-align: center; /* Aliniază titlul pe centru */
+    }
+
+    .gif-background {
+      background-image: url("final.gif");
+      background-size: auto;
+      background-position: center
+    }
+
+
+    /* Stilizare pentru butonul YouTube */
+    .btn-youtube {
+      display: block; /* Transformă link-ul într-un element de tip block */
+      width: 200px; /* Setează o lățime pentru buton */
+      margin: 0 auto; /* Centrează butonul pe pagină */
+      padding: 12px 24px; /* Adaugă spațiu între text și marginea butonului */
+      font-size: 18px;
+      text-decoration: none;
+      background-color: rgba(52, 238, 229, 0.048); /* culoare roșie pentru buton */
+      color: #1f6feb; /* text alb */
+      border-radius: 6px;
+      transition: background-color 0.3s ease;
+      text-align: center; /* Aliniază textul pe centru în buton */
+    }
+
+    /* Stilizare pentru butonul YouTube la hover */
+    .btn-youtube:hover {
+      background-color: rgba(0, 146, 204, 0.281); /* Nuanță mai închisă de roșu la hover */
+    }
+
+
+    
+
+    .btn-youtube.gif-background {
+      background-image: url("ezgif.com-gif-maker.gif"); /* Înlocuiește cu calea către gif-ul tău */
+      background-size: cover; /* Redimensionare pentru a acoperi complet butonul */
+      background-position: center; /* Poziționare centrată a imaginii */
+      /* Alte stiluri specifice pentru imagine, cum ar fi padding sau margin */
+    }
+
+    header {
+      padding-top: .5em;
+      padding-bottom: .5em;
+      border: 1px solid #a2a2a2;
+      background-color: #5c8fb4;
+      border-radius: 5px;
+      text-align: center;
+      padding: 10px;
+      border: 1px solid #1f6feb; /* Culoare pentru contur */
+      background-color: #0d1117;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Umbră ușoară */
+      
+    }
+
+    header .logo a {
+      text-decoration: none;
+      color: #34495e;
+    }
+
+    .main-nav {
+      display: flex;
+      justify-content: center;
+      margin-top: 10px;
+      list-style: none; 
+    }
+
+    .main-nav a {
+      color: #34495e;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: .99em;
+      text-transform: uppercase;
+    }
+
+    .main-nav a:hover {
+      color: #718daa;
+    }
+
+    .full-width-section {
+      width: calc(100% - 100px);
+      margin: 60px auto;
+      padding: 20px;
+      box-sizing: border-box;
+      text-align: center;
+      transition: transform 0.5s ease;
+      opacity: 0;
+      transform: translateY(50px); /* Le deplasăm în sus cu 50px */
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+
+    .about, .more, .contact {
+      background-color: rgba(36, 36, 36, 0.3); /* Ajustăm opacitatea aici */
+      padding: 50px;
+      text-align: center;
+      border: 1px solid #ccc;
+      border-radius: 20px;
+      margin-right: 80px;
+      max-width: 40%;
+      box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
+    }
+
+
+    h2 {
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    p {
+      color: #555;
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+
+
+
+/* Adaugă stil când secțiunea devine vizibilă */
+    .full-width-section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .full-width-section.active {
+      transform: scale(1.05); /* Mărește puțin dimensiunea secțiunii */
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background-image: url("final.gif");
+      background-size: cover;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    header {
+      padding: 10px;
+      border: 1px solid #1f6feb; /* Culoare pentru contur */
+      background-color: #0d1117;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Umbră ușoară */
+      border-radius: 5px;
+      text-align: center;
+    }
+
+    header .logo a {
+      text-decoration: none;
+      color: #58a6ff; /* Culoare pentru text */
+      font-weight: bold;
+      font-size: 24px;
+    }
+
+    .main-nav a {
+      color: #c9d1d9; /* Text alb */
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 18px;
+    }
+
+    .main-nav a:hover {
+      color: #58a6ff; /* Culoare mai deschisă la hover */
+    }
+
+    .full-width-section {
+      background-color: #161b22; /* Fundal închis pentru secțiuni */
+      color: #c9d1d9; /* Text alb pentru secțiuni */
+      border: 1px solid #30363d; /* Contur mai închis */
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4); /* Umbră mai pronunțată */
+      padding: 20px;
+      margin: 30px auto;
+    }
+
+    h2 {
+      color: #58a6ff; /* Culoare pentru titlu */
+      margin-bottom: 20px;
+      font-size: 21px;
+    }
+
+
+
+    footer {
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end; /* Așezăm link-urile în partea de jos */
+      background-color: #0d1117;
+      color: #c9d1d9;
+      padding-bottom: 20px;
+      box-shadow: 0px -2px 4px rgba(0, 0, 0, 0.2);
+      height: 150px;
+    }
+
+    footer ul {
+      display: flex;
+      justify-content: flex-start; /* Aliniere la stânga */
+      margin: 0;
+      padding: 0;
+      align-self: flex-start; /* Aliniere la stânga */
+    }
+
+    footer li {
+      list-style: none;
+      margin: 0 50px 0;
+    }
+
+    footer a {
+      text-decoration: #1f6feb; /* Elimină sublinierea din link-uri */
+      color: inherit; /* Păstrează culoarea implicită a textului din footer */
+    }
+
+    .container h1{
+      margin-top: 70px;
+      margin-bottom: 70px;
+    }
+
+  </style>
+</head>
+<body>
+  <header class="header">
+    <ul class="main-nav">
+      <li><a href="#">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#more">More</a></li>
+      <li><a href="https://discord.gg/AXQMNpvrZN">Contact</a></li>
+    </ul>
+  </header>
+
+  <div class="container">
+    <h1>How to get a bigger discount on every pandabuy/ hagobuy order?</h1>
+    <a href="https://www.youtube.com" target="_blank" class="btn-youtube gif-background">More info</a>
+  </div>
+
+  <div id="more" class="full-width-section more">
+    <h2>More info</h2>
+    <p>You can have a significant discount if you have extra income. When I discovered this site, I was thrilled because I could order more things.</p>
+  </div>
+
+  <div id="about" class="full-width-section about">
+    <h2>About Us</h2>
+    <p>We're a community where we help each other have the possibility of larger orders due to additional income.</p>
+  </div>
+
+  <div id="contact" class="full-width-section contact">
+    <h2>Contact for more</h2>
+    <p>If you have any doubts or any other questions, you can rely on us by opening a ticket on our Discord server, which you can find below.</p>
+  </div>
+
+  <footer>
+    <div class="footer">
+      <ul>
+        <li><a href="https://discord.gg/AXQMNpvrZN">Discord community</a></li>
+        <li><a href="https://www.tiktok.com/@solekickrep">TikTok</a></li>
+        <li><a href="#about">About us</a></li>
+      </ul>
+    </div>
+    <p>All right all reserved</p>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const sections = document.querySelectorAll('.full-width-section');
+  
+      function checkPosition() {
+        sections.forEach((section) => {
+          const distanceFromTop = section.getBoundingClientRect().top;
+          if (distanceFromTop - window.innerHeight <= 0) {
+            section.classList.add('visible');
+          } else {
+            section.classList.remove('visible');
+          }
+        });
+      }
+  
+      window.addEventListener('scroll', checkPosition);
+      checkPosition();
+  
+      // Adăugăm evenimentul de click pentru secțiuni
+      sections.forEach((section) => {
+        section.addEventListener('click', () => {
+          section.classList.toggle('active');
+        });
+      });
+    });
+  </script>
+</body>
+</html>
